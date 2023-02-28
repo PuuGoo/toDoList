@@ -25,17 +25,17 @@ app.get("/", (req, res) => {
     
     res.render("list", {listTitle: day, newListItem:items}); //render(kết xuất) 1 tệp được gọi là danh sách(list) và chúng ta sẽ chuyển tệp đó thành 1 biến có tên là kindOfDay và giá trị sẽ bằng bất kỳ giá trị nào của biến hiện tại của chúng ta là ngày.Chúng ta đang tạo phản hồi của mình bằng cách render  1 tiệp có tên là List(trong thư mục views) xem nó có phải phần mở rộng không?. Sau đó vào file List -> truyền một biến duy nhất kindOfDay và giá trí cung cấp cho nó là giá trị biến day.
 });
-app.get("/Work", (req,res) => {
-    res.render("list", {listTitle: "WorkList", newListItem: WorkItem});
-});
+// app.get("/Work", (req,res) => {
+//     res.render("list", {listTitle: "WorkList", newListItem: WorkItem});
+// });
 
-app.get("/Study", (req,res) => {
-    res.render("list", {listTitle: "StudyList", newListItem: StudyItem})
-});
+// app.get("/Study", (req,res) => {
+//     res.render("list", {listTitle: "StudyList", newListItem: StudyItem})
+// });
 
-app.get("/about",(req,res) => {
-    res.render("about");
-});
+// app.get("/about",(req,res) => {
+//     res.render("about");
+// });
 
 app.post("/", (req,res) => {
     let item = req.body.newItem;
