@@ -1,0 +1,26 @@
+<%- include("header"); -%>
+    <div class="box" id="heading">
+        <h1 ><%= listTitle %></h1>
+    </div>
+    <div class="box">
+            <% for (var i =0; i <=newListItem.length; i++){ %>
+                <div class="item">
+                    <input type="checkbox">
+                    <p><%= newListItem[i] %></p>
+                </div>
+                
+            <% } %>
+        <form action="/" method="post">
+            <!-- autocomplete="off" tắt đề cử tự động -->
+            <input type="text" name="newItem" placeholder="New Item" autocomplete="off"> 
+            <button type="submit" name="list" value="<%= listTitle %>">+</button>
+        </form>
+    </div>
+    <!-- <% if ((listTitle === "Saturday") || (listTitle === "Sunday" )){ %>
+        <h1 style="color: purple"><%= listTitle %> ToDo List</h1>
+    <% } else { %>
+        <h1 style="color: blue"><%= listTitle %> ToDo List</h1>
+    <% } %> -->
+    <%- include("footer"); -%>
+    
+   
