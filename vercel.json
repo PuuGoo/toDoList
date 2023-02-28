@@ -1,18 +1,17 @@
 {
-  "version": 2,
-  "builds": [
-		{
-			"src": "package.json",
-			"use": "now-sapper"
-		}
-	],
-  "env": {
-    "SECRET": "@my-secret-name"
-  },
-  "functions": {
-    "api/test.js": {
-      "memory": 1024,
-      "maxDuration": 10
-    }
+    "version": 2,
+    "builds": [
+      {
+        "src": "./index.js",
+        "src": "./date.js",
+        "use": "@vercel/node"
+      }
+    ],
+    "routes": [
+      
+      {
+        "src": "/(.*)",
+        "dest": "/"
+      }
+    ]
   }
-}
